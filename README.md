@@ -1,2 +1,2 @@
 # 4mynation-app
-Beschreibung: Interaktive Kulturplattform mit Tagesplan, Zitaten, Shop und Motivation
+Beschreibung: Interaktive Kulturplattform mit Tagesplan, Landestypischen Speisen, Zitaten,Ereignissen, Shop und Motivation.
