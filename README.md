@@ -1,5 +1,7 @@
 # 4mynation-app
 Beschreibung: Interaktive Kulturplattform mit Tagesplan, Landestypischen Speisen, Zitaten,Ereignissen, Shop und Motivation.
+
+
 📝 Projektbeschreibung: 4MyNation – Kultur. Stolz. Identität.
 🎯 Ziel des Projekts
 „4MyNation“ ist eine interaktive Webplattform, die kulturelle Identität, persönliche Motivation und modernes Design miteinander verbindet. Nutzer wählen ein Land (z. B. Albanien, Türkei, Spanien) und erleben eine einzigartige Mischung aus kulturellen Zitaten, Filmtipps, Kleidung, Geschichte und persönlichen Tagesimpulsen.
