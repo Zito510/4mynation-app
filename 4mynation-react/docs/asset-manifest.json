@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.27aa7d34.css",
+    "main.js": "/static/js/main.52147e4a.js",
+    "static/media/ukraine.png": "/static/media/ukraine.dc7dffe7d084050001a8.png",
+    "static/media/spanien.png": "/static/media/spanien.2a37033aab0848d26271.png",
+    "static/media/russland.png": "/static/media/russland.fbb69bf3c767efdf5a14.png",
+    "static/media/albanien.png": "/static/media/albanien.928bef56fe7292ee96e4.png",
+    "static/media/tuerkei.png": "/static/media/tuerkei.e569aa829c26f0750160.png",
+    "static/media/hero.png": "/static/media/hero.3a2eb4eac98f67e20683.png",
+    "static/media/logo.png": "/static/media/logo.30af17b58e4bd4db6947.png",
+    "index.html": "/index.html",
+    "main.27aa7d34.css.map": "/static/css/main.27aa7d34.css.map",
+    "main.52147e4a.js.map": "/static/js/main.52147e4a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.27aa7d34.css",
+    "static/js/main.52147e4a.js"
+  ]
+}
