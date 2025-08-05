@@ -62,3 +62,48 @@ CREATE TABLE IF NOT EXISTS gerichte (
   FOREIGN KEY (land_id) REFERENCES laender(id)
     ON DELETE CASCADE
 );
+-- 📜 Tabelle: Historische Ereignisse
+CREATE TABLE IF NOT EXISTS ereignisse (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  laender_id INT,
+  titel VARCHAR(200),
+  jahr INT,
+  beschreibung TEXT,
+  FOREIGN KEY (laender_id) REFERENCES laender(id) ON DELETE CASCADE
+);
+
+-- 🎥 Tabelle: Stars
+CREATE TABLE IF NOT EXISTS stars (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  laender_id INT,
+  name VARCHAR(100),
+  beschreibung TEXT,
+  FOREIGN KEY (laender_id) REFERENCES laender(id) ON DELETE CASCADE
+);
+
+-- 🍲 Tabelle: Speisen
+CREATE TABLE IF NOT EXISTS speisen (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  laender_id INT,
+  name VARCHAR(100),
+  beschreibung TEXT,
+  FOREIGN KEY (laender_id) REFERENCES laender(id) ON DELETE CASCADE
+);
+
+-- 🍹 Tabelle: Getränke
+CREATE TABLE IF NOT EXISTS getraenke (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  laender_id INT,
+  name VARCHAR(100),
+  beschreibung TEXT,
+  FOREIGN KEY (laender_id) REFERENCES laender(id) ON DELETE CASCADE
+);
+
+-- 💬 Tabelle: Sprichwörter
+CREATE TABLE IF NOT EXISTS sprichwoerter (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  laender_id INT,
+  spruch TEXT,
+  bedeutung TEXT,
+  FOREIGN KEY (laender_id) REFERENCES laender(id) ON DELETE CASCADE
+);
