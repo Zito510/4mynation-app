@@ -1,0 +1,29 @@
+/* 📁 src/pages/AGB.css */
+.page-agb {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #1a1919;
+  color: #f9f6f6;
+}
+
+.page-agb h1 {
+  border-bottom: 2px solid #b20d0d;
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+}
+
+.page-agb h2 {
+  margin-top: 2em;
+  color: #e6e9ec;
+}
+
+.page-agb p,
+.page-agb li {
+  margin-bottom: 1em;
+}
+
+.page-agb a {
+  color: #f8efef;
+  text-decoration: underline;
+}

@@ -1,0 +1,27 @@
+/* 📁 src/pages/Impressum.css */
+.page-impressum {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #f3eeee;
+  background: #252424;
+}
+
+.page-impressum h1 {
+  border-bottom: 3px solid #dc0d0d;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-impressum h2 {
+  margin-top: 1.5rem;
+  color: #e8ebed;
+}
+
+.page-impressum p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.page-impressum section + section {
+  margin-top: 1.5rem;
+}

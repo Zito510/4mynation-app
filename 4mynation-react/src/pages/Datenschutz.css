@@ -1,0 +1,34 @@
+
+.page-datenschutz {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #f0ebeb;
+  background: #141414;
+}
+
+.page-datenschutz h1 {
+  border-bottom: 3px solid #ea0f0f;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-datenschutz h2 {
+  margin-top: 1.5rem;
+  color: #eaecef;
+}
+
+.page-datenschutz p,
+.page-datenschutz li {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.page-datenschutz ul {
+  list-style: disc inside;
+  margin-left: 1rem;
+}
+
+.page-datenschutz a {
+  color: #0066cc;
+  text-decoration: underline;
+}
