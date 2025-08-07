@@ -1,0 +1,95 @@
+/* Russland-Seite allgemeines Styling */
+.russland-page {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Vollbild-Hero mit russischem Hintergrund */
+.russland-hero {
+  position: relative;
+  height: 100vh;
+  background: url('../assets/images/bg-russia.png') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Überlagerter Begrüßungstext auf dem Hero */
+.russland-hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+  max-width: 80%;
+}
+.russland-hero-text h2 {
+  margin: 0 0 10px;
+  font-size: 2.5rem;
+}
+.russland-hero-text p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* Gemeinsame Section-Styles */
+.russland-section {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 12px;
+  border: 1px solid rgba(213, 43, 30, 0.6); /* Rot-Rand */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.russland-section:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(213, 43, 30, 0.8);
+}
+.russland-section h3 {
+  margin-bottom: 1rem;
+  color: #0039A6; /* Blau */
+  border-bottom: 2px solid #0039A6;
+  padding-bottom: 0.5rem;
+}
+
+/* Listen-Styles */
+.russland-section ul {
+  list-style: none;
+  padding: 0;
+}
+.quote-item,
+.event-item {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05); /* Weiß-Hintergrund */
+  transition: background 0.3s ease;
+}
+.quote-item:hover,
+.event-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Zitate */
+.quote-item blockquote {
+  font-style: italic;
+  margin: 0;
+}
+.quote-item cite {
+  display: block;
+  text-align: right;
+  color: #ccc;
+}
+
+/* Ereignisse */
+.event-item strong {
+  color: #D52B1E; /* Rot */
+  margin-right: 0.5rem;
+}
