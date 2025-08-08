@@ -8,7 +8,7 @@
 /* Vollbild-Hero mit gelb-rotem Hintergrundbild */
 .spanien-hero {
   position: relative;
-  height: 100vh;
+  height: 125vh;
   background: url('../assets/images/bg-spain.png') center center / cover no-repeat;
   display: flex;
   align-items: center;
@@ -18,7 +18,7 @@
 /* Begrüßungstext zentriert auf dem Hero */
 .spanien-hero-text {
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: rgba(0, 0, 0, 0.6);

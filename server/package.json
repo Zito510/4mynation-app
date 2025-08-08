@@ -1,11 +1,11 @@
 {
-  "name": "4mynation-server",
+  "name": "server",
   "version": "1.0.0",
-  "description": "Express-Backend für 4MyNation",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev":   "nodemon index.js"
+    "dev": "nodemon index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -14,7 +14,5 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
-  },
-  "author": "",
-  "license": "ISC"
+  }
 }

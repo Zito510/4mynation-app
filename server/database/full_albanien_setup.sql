@@ -1,4 +1,89 @@
--- Einfügen der Länder
+SET FOREIGN_KEY_CHECKS = 0;
+
+
+-- Falls schon vorhanden, löschen
+DROP TABLE IF EXISTS sprichwoerter, getraenke, speisen, stars, filme, ereignisse, laender;
+
+-- =============================
+-- Tabellenstruktur
+-- =============================
+
+CREATE TABLE laender (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  beschreibung TEXT
+);
+
+CREATE TABLE ereignisse (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  laender_id INT NOT NULL,
+  titel VARCHAR(255),
+  jahr INT,
+  beschreibung TEXT,
+  FOREIGN KEY (laender_id) REFERENCES laender(id)
+);
+
+CREATE TABLE filme (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  laender_id INT NOT NULL,
+  titel VARCHAR(255),
+  jahr INT,
+  beschreibung TEXT,
+  FOREIGN KEY (laender_id) REFERENCES laender(id)
+);
+
+CREATE TABLE stars (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  laender_id INT NOT NULL,
+  name VARCHAR(255),
+  beschreibung TEXT,
+  FOREIGN KEY (laender_id) REFERENCES laender(id)
+);
+
+CREATE TABLE speisen (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  laender_id INT NOT NULL,
+  name VARCHAR(255),
+  beschreibung TEXT,
+  FOREIGN KEY (laender_id) REFERENCES laender(id)
+);
+
+CREATE TABLE getraenke (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  laender_id INT NOT NULL,
+  name VARCHAR(255),
+  beschreibung TEXT,
+  FOREIGN KEY (laender_id) REFERENCES laender(id)
+);
+
+CREATE TABLE sprichwoerter (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  laender_id INT NOT NULL,
+  spruch TEXT,
+  bedeutung TEXT,
+  FOREIGN KEY (laender_id) REFERENCES laender(id)
+);
+USE deine_datenbank;
+
+ALTER DATABASE deine_datenbank
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_unicode_ci;
+
+ALTER TABLE laender
+  CONVERT TO CHARACTER SET utf8mb4
+  COLLATE utf8mb4_unicode_ci;
+
+-- falls einzelne Textspalten sicher gezogen werden sollen:
+ALTER TABLE laender
+  MODIFY name VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  MODIFY beschreibung TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+
+-- =============================
+-- Daten für Albanien
+-- =============================
+
+-- Land
 INSERT INTO laender (id, name, beschreibung) VALUES
   (1, 'Albanien', 'Südosteuropäisches Land mit reicher Geschichte und Kultur.');
 
@@ -25,7 +110,7 @@ INSERT INTO ereignisse (laender_id, titel, jahr, beschreibung) VALUES
   (1, 'Staatskrise durch Pyramidensysteme', 1997, 'Fast-Bürgerkrieg nach Zusammenbruch illegaler Finanzsysteme.'),
   (1, 'NATO-Beitritt', 2009, 'Albanien wird Mitglied des Militärbündnisses.');
 
--- Berühmte Filme
+-- Filme
 INSERT INTO filme (laender_id, titel, jahr, beschreibung) VALUES
   (1, 'Slogans', 2001, 'Satire über das Bildungssystem während der Diktatur.'),
   (1, 'The Forgiveness of Blood', 2011, 'Drama über Blutrache im modernen Albanien.'),
@@ -38,7 +123,7 @@ INSERT INTO filme (laender_id, titel, jahr, beschreibung) VALUES
   (1, 'East, West, East', 2009, 'Komödie über eine Radrennmannschaft während des Umbruchs.'),
   (1, 'Chromium', 2015, 'Coming-of-Age-Drama in einer albanischen Industriestadt.');
 
--- Berühmte Stars
+-- Stars
 INSERT INTO stars (laender_id, name, beschreibung) VALUES
   (1, 'Dua Lipa', 'Weltstar im Pop, Eltern aus dem Kosovo.'),
   (1, 'Rita Ora', 'Britische Popsängerin mit kosovarischer Herkunft.'),
@@ -51,7 +136,7 @@ INSERT INTO stars (laender_id, name, beschreibung) VALUES
   (1, 'Masiela Lusha', 'Schauspielerin aus der George Lopez Show.'),
   (1, 'Lorik Cana', 'Ehemaliger Kapitän der albanischen Fußballnationalmannschaft.');
 
--- Berühmte Speisen
+-- Speisen
 INSERT INTO speisen (laender_id, name, beschreibung) VALUES
   (1, 'Byrek', 'Blätterteig mit Füllung (Spinat, Fleisch, Käse), überall beliebt.'),
   (1, 'Tavë Kosi', 'Lammauflauf mit Joghurt und Reis, Nationalgericht.'),
@@ -64,7 +149,7 @@ INSERT INTO speisen (laender_id, name, beschreibung) VALUES
   (1, 'Paçe', 'Suppe aus Kopf oder Kutteln, deftig und wärmend.'),
   (1, 'Trileçe', 'Drei-Milch-Kuchen, süßer Klassiker.');
 
--- Berühmte Getränke
+-- Getränke
 INSERT INTO getraenke (laender_id, name, beschreibung) VALUES
   (1, 'Raki', 'Klarer Schnaps aus Trauben oder Obst, sehr traditionell.'),
   (1, 'Dhallë', 'Joghurtgetränk, salzig und erfrischend.'),
@@ -77,7 +162,7 @@ INSERT INTO getraenke (laender_id, name, beschreibung) VALUES
   (1, 'Çaj Mali', 'Bergtee aus wilden Kräutern, beruhigend und aromatisch.'),
   (1, 'Shira', 'Zuckerwasser oder Sirup, manchmal fermentiert.');
 
--- Berühmte Sprichwörter
+-- Sprichwörter
 INSERT INTO sprichwoerter (laender_id, spruch, bedeutung) VALUES
   (1, 'Gjuha është pasuria më e madhe e një kombi.', 'Die Sprache ist der größte Reichtum eines Volkes.'),
   (1, 'Më mirë një zog në dorë se sa një pëllumb në pyll.', 'Besser ein Vogel in der Hand als eine Taube im Wald.'),
@@ -89,3 +174,5 @@ INSERT INTO sprichwoerter (laender_id, spruch, bedeutung) VALUES
   (1, 'Fjalët e holla shkojnë në zemër.', 'Sanfte Worte gehen ins Herz.'),
   (1, 'Miku i mirë është një pasuri.', 'Ein guter Freund ist ein Schatz.'),
   (1, 'Kush nuk di të falë, nuk di të dojë.', 'Wer nicht vergeben kann, kann nicht lieben.');
+
+SET FOREIGN_KEY_CHECKS = 1;

@@ -12,7 +12,7 @@ body {
   background: #3a3939;
   color: #f3f1f1;
   padding: 10px 30px;
-  display: flex;
+  display: fixed;
   align-items: center;
   justify-content: space-between;
   border-radius: 0 0 12px 12px;
@@ -23,7 +23,7 @@ body {
 }
 
 .topbar .logo {
-  height: 40px;
+  height: 60px;
 }
 
 .nav-links {        
